@@ -2,7 +2,7 @@
   <div >
     <h1>{{ title }}</h1>
     <ul>
-      <book-item v-for="book in books" v-bind:book="book"></book-item>
+      <book-item v-for="(book, index) in books" :key="book" v-key="`book-${index}`"></book-item>
     </ul>
     <book-form @addBook='appendBook'></book-form>
   </div>
@@ -33,7 +33,7 @@
     },
 };
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
   h1, h2 {
     font-weight: normal;

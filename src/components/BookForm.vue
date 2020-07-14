@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import BookForm from './BookForm';
 export default {
   name: 'BookForm',
   props: ['books'],
